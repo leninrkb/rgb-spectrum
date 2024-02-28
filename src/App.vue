@@ -21,6 +21,7 @@ html {
     border-radius: 0.5em;
     background-color: gray;
     color: rgb(250, 250, 250);
-    height: 100vh;
+    overflow: auto;
+    height: 96vh;
 }
 </style>
