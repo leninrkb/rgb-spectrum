@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="vcontainer">
         <router-view />
     </div>
 </template>
@@ -18,12 +18,14 @@ html {
     background-color: $light_yellow;
 }
 
-.container {
+.vcontainer {
+    margin: 0.5em;
     padding: 0.5em;
     border-radius: 0.5em;
     background-color: $dark_green;
     color: $text_gray;
     overflow: auto;
-    height: 96vh;
+    height: 98vh;
+    box-shadow: 0 0 0.5em -0.1em;
 }
 </style>
