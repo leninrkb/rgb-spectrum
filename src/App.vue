@@ -5,6 +5,8 @@
 </template>
 
 <style lang="scss">
+@import './scss/_var.scss';
+
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -13,14 +15,14 @@
 }
 
 html {
-    background-color: rgb(200, 200, 200);
+    background-color: $light_yellow;
 }
 
 .container {
     padding: 0.5em;
     border-radius: 0.5em;
-    background-color: gray;
-    color: rgb(250, 250, 250);
+    background-color: $dark_green;
+    color: $text_gray;
     overflow: auto;
     height: 96vh;
 }
