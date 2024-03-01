@@ -15,7 +15,7 @@
 
     &:hover {
         translate: 0 -.1em;
-        background-color: lighten($color: $light_orange, $amount: 2);
+        // background-color: lighten($color: $light_orange, $amount: 2);
         box-shadow: $shadow;
     }
 }
