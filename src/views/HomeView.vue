@@ -1,22 +1,16 @@
 <template>
     <VColumn>
         <ElevatedCard>
-            Seccion 1
+            <VRow>
+                <input type="file">
+                <button>browse image</button>
+            </VRow>
         </ElevatedCard>
         <ElevatedCard>
             Seccion 2
         </ElevatedCard>
         <ElevatedCard>
-            Seccion 3
-            <br>
-            <VRow>
-                <div class="bg-teal-500">
-                    Lenin (TurtleBytes)
-                </div>
-                <div class="bg-teal-500">
-                    Sana Sunomiya
-                </div>
-            </VRow>
+            seccion 3
         </ElevatedCard>
     </VColumn>
 </template>
