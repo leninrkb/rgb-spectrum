@@ -1,10 +1,22 @@
 <template>
-    <div class="class">{{ init }}</div>
+    <VColumn>
+        <div>
+            back
+        </div>
+        <div>
+            googly
+        </div>
+        <div>
+            search field
+        </div>
+        <div>
+            response
+        </div>
+    </VColumn>
 </template>
 
 <script setup>
-import { ref } from "vue";
-let init = ref('hello world')
+import VColumn from '@/layouts/VColumn.vue';
 </script>
 
 <style scoped></style>
