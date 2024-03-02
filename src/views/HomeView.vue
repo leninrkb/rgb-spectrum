@@ -3,7 +3,7 @@
         <ElevatedCard>
             <VRow>
                 <input type="file">
-                <FlatButton>Browse image</FlatButton>
+                <FlatButton><router-link :to="{ name: 'browse' }">Browse on web</router-link></FlatButton>
             </VRow>
         </ElevatedCard>
         <ElevatedCard>
