@@ -3,7 +3,7 @@
         <ElevatedCard>
             <VRow>
                 <input type="file">
-                <button>browse image</button>
+                <FlatButton>Browse image</FlatButton>
             </VRow>
         </ElevatedCard>
         <ElevatedCard>
@@ -19,6 +19,7 @@
 import ElevatedCard from '../components/ElevatedCard.vue';
 import VRow from '../layouts/VRow.vue';
 import VColumn from '../layouts/VColumn.vue'
+import FlatButton from '../components/FlatButton.vue';
 </script>
 
 <style scoped></style>
