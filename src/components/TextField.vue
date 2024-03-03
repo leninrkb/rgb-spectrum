@@ -1,6 +1,6 @@
 <template>
     <div>
-        <input type="text" v-on:release="emit_data" v-model="input_data">
+        <input type="text" v-on:keyup="emit_data" v-model="input_data">
         <img src="" alt="icon">
         <img src="" alt="icon">
     </div>

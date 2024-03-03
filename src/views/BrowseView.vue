@@ -16,7 +16,7 @@
             </VRow>
         </div>
         <div>
-            search field
+            <TextField @data="(q) => { search_text = q; console.log(search_text) }"></TextField>
         </div>
         <div>
             response
@@ -28,7 +28,10 @@
 import VColumn from '@/layouts/VColumn.vue';
 import GoBack from '@/components/GoBack.vue';
 import VRow from '@/layouts/VRow.vue';
+import TextField from '@/components/TextField.vue';
+import { ref } from 'vue';
 
+let search_text = ref('')
 </script>
 
 <style scoped>
