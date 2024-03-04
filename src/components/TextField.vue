@@ -1,6 +1,6 @@
 <template>
     <div class="outer">
-        <input class="text" type="text" v-on:keyup="emit_data" v-model="input_data">
+        <input id="textfield" type="text" v-on:keyup="emit_data" v-model="input_data">
         <img v-if="props.icon1 !== null" id="icon1" class="inner" :src="props.icon1" alt="icon1">
         <img v-if="props.icon2 !== null" id="icon2" class="inner" :src="props.icon2" alt="icon2">
     </div>
@@ -52,9 +52,9 @@ const emit_data = () => {
     right: 2px;
 }
 
-.text {
-    padding-left: 2em;
-    padding-right: 2em;
+#textfield {
+    padding: 0.5em 2em;
     border-radius: $radius;
+    font-size: 1.2em;
 }
 </style>

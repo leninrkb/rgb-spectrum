@@ -27,16 +27,16 @@
 </template>
 
 <script setup>
-import VColumn from '@/layouts/VColumn.vue';
-import GoBack from '@/components/GoBack.vue';
-import VRow from '@/layouts/VRow.vue';
-import TextField from '@/components/TextField.vue';
-import { ref } from 'vue';
+import VColumn from "@/layouts/VColumn.vue";
+import GoBack from "@/components/GoBack.vue";
+import VRow from "@/layouts/VRow.vue";
+import TextField from "@/components/TextField.vue";
+import { ref } from "vue";
 
-let search_text = ref('')
+let search_text = ref("")
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .logo {
     font-size: 5em;
     font-family: sans-serif;
@@ -65,5 +65,10 @@ let search_text = ref('')
     & span:nth-child(6) {
         color: rgb(250, 62, 62);
     }
+}
+
+.textfield {
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 </style>
