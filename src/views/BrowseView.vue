@@ -16,7 +16,9 @@
             </VRow>
         </div>
         <div>
-            <TextField @data="(q) => { search_text = q; console.log(search_text) }"></TextField>
+            <VRow>
+                <TextField @data="(q) => { search_text = q }"></TextField>
+            </VRow>
         </div>
         <div>
             response
