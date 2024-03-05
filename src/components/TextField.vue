@@ -39,9 +39,10 @@ const emit_data = () => {
 
 .inner {
     position: absolute;
-    top: 0;
-    height: 100%;
+    top: 0.3em;
+    height: 70%;
     border-radius: 100%;
+    opacity: 0.5;
 }
 
 #icon1 {

@@ -17,7 +17,7 @@
         </div>
         <div>
             <VRow>
-                <TextField @data="(q) => { search_text = q }"></TextField>
+                <TextField :icon1="search_icon" @data="(q) => { search_text = q }"></TextField>
             </VRow>
         </div>
         <div>
@@ -34,6 +34,7 @@ import TextField from "@/components/TextField.vue";
 import { ref } from "vue";
 
 let search_text = ref("")
+let search_icon = require("../assets/search_FILL1_wght400_GRAD0_opsz48.svg");
 </script>
 
 <style scoped lang="scss">
@@ -65,10 +66,5 @@ let search_text = ref("")
     & span:nth-child(6) {
         color: rgb(250, 62, 62);
     }
-}
-
-.textfield {
-    padding-top: 1em;
-    padding-bottom: 1em;
 }
 </style>
