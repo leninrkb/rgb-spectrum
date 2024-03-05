@@ -17,16 +17,19 @@
         </div>
         <div>
             <VRow>
-                <TextField :icon1="search_icon" @data="(q) => { search_text = q }"></TextField>
+                <form @submit.prevent="form_handler">
+                    <TextField :icon1="search_icon" @data="(q) => { search_text = q }"></TextField>
+                </form>
             </VRow>
         </div>
         <div>
-            response
+            <SearchResults></SearchResults>
         </div>
     </VColumn>
 </template>
 
 <script setup>
+import SearchResults from "@/components/SearchResults.vue";
 import VColumn from "@/layouts/VColumn.vue";
 import GoBack from "@/components/GoBack.vue";
 import VRow from "@/layouts/VRow.vue";
@@ -35,6 +38,10 @@ import { ref } from "vue";
 
 let search_text = ref("")
 let search_icon = require("../assets/search_FILL1_wght400_GRAD0_opsz48.svg");
+
+const form_handler = () => {
+    console.log(search_text.value);
+}
 </script>
 
 <style scoped lang="scss">
