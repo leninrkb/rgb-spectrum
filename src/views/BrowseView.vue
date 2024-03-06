@@ -71,7 +71,7 @@ const form_handler = () => {
     }
 
     & span:nth-child(6) {
-        color: rgb(250, 62, 62);
+        color: rgb(250, 62, 62);                    
     }
 }
 </style>
