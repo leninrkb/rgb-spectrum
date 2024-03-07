@@ -7,9 +7,12 @@
 
 <script setup>
 import FlatButton from "./FlatButton.vue";
+import { useFileStore } from "../store/index.js";
+
+const store = useFileStore();
 
 const file_handler = (e) => {
-    console.log(e.target.files[0]);
+    store.file = e.target.files[0];
 };
 </script>
 

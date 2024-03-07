@@ -7,7 +7,7 @@
 			</VRow>
 		</ElevatedCard>
 		<ElevatedCard>
-			title: selected img img: <img :src="img" alt="selected img" />
+			title: selected img img: <img :src="store.get_object_url" alt="selected img" />
 			info: m * n
 		</ElevatedCard>
 		<ElevatedCard> seccion 3 </ElevatedCard>
@@ -20,8 +20,9 @@ import ElevatedCard from "../components/ElevatedCard.vue";
 import VRow from "../layouts/VRow.vue";
 import VColumn from "../layouts/VColumn.vue";
 import FlatButton from "../components/FlatButton.vue";
-import { ref } from "vue";
+// import { ref, onMounted } from "vue";
+import { useFileStore } from "../store/index.js";
 
-let img = ref(null);
+const store = useFileStore();
 
 </script>
