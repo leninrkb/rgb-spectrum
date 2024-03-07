@@ -1,54 +1,27 @@
 <template>
-  <VColumn>
-    <ElevatedCard>
-      <VRow>
-        <div id="upload_container">
-          <FlatButton>Upload Image</FlatButton>
-          <input id="upload_input" type="file" @change="file_handler" />
-        </div>
-        <FlatButton
-          ><router-link :to="{ name: 'browse' }"
-            >Browse on web</router-link
-          ></FlatButton
-        >
-      </VRow>
-    </ElevatedCard>
-    <ElevatedCard>
-      title: selected img img: <img :src="img" alt="selected img" />
-      info: m * n
-    </ElevatedCard>
-    <ElevatedCard> seccion 3 </ElevatedCard>
-  </VColumn>
+	<VColumn>
+		<ElevatedCard>
+			<VRow>
+				<InputFile></InputFile>
+				<FlatButton><router-link :to="{ name: 'browse' }">Browse on web</router-link></FlatButton>
+			</VRow>
+		</ElevatedCard>
+		<ElevatedCard>
+			title: selected img img: <img :src="img" alt="selected img" />
+			info: m * n
+		</ElevatedCard>
+		<ElevatedCard> seccion 3 </ElevatedCard>
+	</VColumn>
 </template>
 
 <script setup>
+import InputFile from "../components/InputFile.vue";
 import ElevatedCard from "../components/ElevatedCard.vue";
 import VRow from "../layouts/VRow.vue";
 import VColumn from "../layouts/VColumn.vue";
 import FlatButton from "../components/FlatButton.vue";
 import { ref } from "vue";
-import File from "../classes/File.js";
 
 let img = ref(null);
-let file = new File();
 
-const file_handler = (e) => {
-  file.read_file(e);
-  img.value = file.get_url();
-};
 </script>
-
-<style scoped lang="scss">
-#upload_container {
-  position: relative;
-}
-
-#upload_input {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0;
-}
-</style>
