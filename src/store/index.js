@@ -10,9 +10,9 @@ export const useFileStore = defineStore('image', {
 	getters: {
 		get_object_url: (state) => {
 			if (state.file === null) {
-				return "";
+				return null;
 			}
 			return URL.createObjectURL(state.file);
 		}
-	}
+	},
 })
