@@ -2,14 +2,11 @@
     <canvas id="canva"></canvas>
 </template>
 
+
 <script setup>
-import { defineProps, onBeforeMount } from "vue";
+import { defineProps, watch } from "vue";
 
 const props = defineProps(["img_url"]);
-
-onBeforeMount(() => {
-    drawimg(props.img_url);
-});
 
 const drawimg = (url) => {
     let img = new Image();
@@ -21,7 +18,10 @@ const drawimg = (url) => {
         ctx.drawImage(img, 0, 0, img.width, img.height);
     }
     img.src = url;
-    console.log(img.src);
 }
 
+watch(() => props.img_url, (newurl) => {
+    console.log("cambio");
+    drawimg(newurl);
+})
 </script>

@@ -9,7 +9,7 @@
 		<ElevatedCard>
 			title: selected img img:
 			<!-- <img :src="store.get_object_url" alt="selected img" /> -->
-			<VCanva v-if="store.get_object_url !== null" :img_url="store.get_object_url"></VCanva>
+			<VCanva :img_url="store.get_object_url"></VCanva>
 			info: m * n
 		</ElevatedCard>
 		<ElevatedCard> seccion 3 </ElevatedCard>

@@ -12,7 +12,14 @@ import { useFileStore } from "../store/index.js";
 const store = useFileStore();
 
 const file_handler = (e) => {
-    store.file = e.target.files[0];
+    const files = e.target.files;
+    if (files !== undefined || files !== null) {
+        if (files.length > 0) {
+            store.file = files[0];
+        }
+    } else {
+        store.file = null;
+    }
 };
 </script>
 
