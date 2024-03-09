@@ -25,3 +25,10 @@ watch(() => props.img_url, (newurl) => {
     drawimg(newurl);
 })
 </script>
+
+
+<style scoped>
+#canva {
+    max-width: 30em;
+}
+</style>
