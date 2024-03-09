@@ -27,8 +27,11 @@ watch(() => props.img_url, (newurl) => {
 </script>
 
 
-<style scoped>
+<style scoped lang="scss">
 #canva {
-    max-width: 30em;
+    max-width: 40em;
+    max-height: 40em;
+    margin: auto;
+    border-radius: $radius;
 }
 </style>
