@@ -7,10 +7,12 @@
 			</VRow>
 		</ElevatedCard>
 		<ElevatedCard>
-			title: {{ store.get_name }}
-			<!-- <img :src="store.get_object_url" alt="selected img" /> -->
-			<VCanva :img_url="store.get_object_url"></VCanva>
-			<OutlineButton>Split chanels</OutlineButton>
+			<VColumn>
+				title: {{ store.get_name }}
+				<!-- <img :src="store.get_object_url" alt="selected img" /> -->
+				<VCanva :img_url="store.get_object_url"></VCanva>
+				<OutlineButton>Split chanels</OutlineButton>
+			</VColumn>
 		</ElevatedCard>
 		<ElevatedCard> seccion 3 </ElevatedCard>
 	</VColumn>
