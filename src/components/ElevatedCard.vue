@@ -12,11 +12,13 @@
     background-color: $light_orange;
     padding: $padding;
     transition: .2s ease-in-out;
+    box-shadow: $shadow;
 
-    &:hover {
-        translate: 0 -.1em;
-        // background-color: lighten($color: $light_orange, $amount: 2);
-        box-shadow: $shadow;
-    }
+
+    // &:hover {
+    //     translate: 0 -.1em;
+    //     // background-color: lighten($color: $light_orange, $amount: 2);
+    //     box-shadow: $shadow;
+    // }
 }
 </style>

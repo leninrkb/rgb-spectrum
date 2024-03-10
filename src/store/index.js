@@ -9,7 +9,6 @@ export const useFileStore = defineStore('image', {
 	},
 	getters: {
 		get_object_url: (state) => {
-			console.log(state.file.width);
 			if (state.file === null) {
 				return null;
 			}

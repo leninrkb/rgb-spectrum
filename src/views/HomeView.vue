@@ -10,12 +10,14 @@
 			title: {{ store.get_name }}
 			<!-- <img :src="store.get_object_url" alt="selected img" /> -->
 			<VCanva :img_url="store.get_object_url"></VCanva>
+			<OutlineButton>Split chanels</OutlineButton>
 		</ElevatedCard>
 		<ElevatedCard> seccion 3 </ElevatedCard>
 	</VColumn>
 </template>
 
 <script setup>
+import OutlineButton from "../components/OutlineButton.vue";
 import VCanva from "../components/VCanva.vue";
 import InputFile from "../components/InputFile.vue";
 import ElevatedCard from "../components/ElevatedCard.vue";

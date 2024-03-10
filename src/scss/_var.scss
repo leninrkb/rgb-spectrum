@@ -1,9 +1,13 @@
-$dark_green: #9adeb1;
-
 $light_green: #CDFADB;
 $light_yellow: #F6FDC3;
 $light_orange: #FFCF96;
 $light_red: #FF8080;
+
+$dark_green: darken($light_green, 5);
+$dark_yellow: darken($light_yellow, 40);
+$dark_red: darken($light_red, 40);
+
+
 
 $text_gray: #3a3a39;
 $text_white: #ffffff;
