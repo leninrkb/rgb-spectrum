@@ -7,10 +7,9 @@
 			</VRow>
 		</ElevatedCard>
 		<ElevatedCard>
-			title: selected img img:
+			title: {{ store.get_name }}
 			<!-- <img :src="store.get_object_url" alt="selected img" /> -->
 			<VCanva :img_url="store.get_object_url"></VCanva>
-			info: m * n
 		</ElevatedCard>
 		<ElevatedCard> seccion 3 </ElevatedCard>
 	</VColumn>
