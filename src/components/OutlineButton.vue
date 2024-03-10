@@ -10,7 +10,7 @@ import FlatButton from "./FlatButton.vue";
 
 <style scoped lang="scss">
 .btn {
-    background-color: unset;
+    background-color: $dark_orange;
     border: 2px solid $dark_green;
     color: $dark_green;
 
