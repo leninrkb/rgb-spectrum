@@ -16,30 +16,16 @@
 		</ElevatedCard>
 		<ElevatedCard>
 			<VRow>
-				<VColumn>
-					<div>channel</div>
-					<div>graph</div>
-					<div>slider</div>
-					<div>apply</div>
-				</VColumn>
-				<VColumn>
-					<div>channel</div>
-					<div>graph</div>
-					<div>slider</div>
-					<div>apply</div>
-				</VColumn>
-				<VColumn>
-					<div>channel</div>
-					<div>graph</div>
-					<div>slider</div>
-					<div>apply</div>
-				</VColumn>
+				<VChannel></VChannel>
+				<VChannel></VChannel>
+				<VChannel></VChannel>
 			</VRow>
 		</ElevatedCard>
 	</VColumn>
 </template>
 
 <script setup>
+import VChannel from "../components/VChannel.vue";
 import OutlineButton from "../components/OutlineButton.vue";
 import VCanva from "../components/VCanva.vue";
 import InputFile from "../components/InputFile.vue";
