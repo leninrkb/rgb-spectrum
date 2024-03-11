@@ -10,7 +10,7 @@
 			<VColumn>
 				title: {{ store.get_name }}
 				<!-- <img :src="store.get_object_url" alt="selected img" /> -->
-				<VCanva :img_url="store.get_object_url"></VCanva>
+				<VCanva :img_url="store.get_object_url" @context="handleCanvaCtx"></VCanva>
 				<OutlineButton>Split chanels</OutlineButton>
 			</VColumn>
 		</ElevatedCard>
@@ -37,5 +37,7 @@ import FlatButton from "../components/FlatButton.vue";
 import { useFileStore } from "../store/index.js";
 
 const store = useFileStore();
-
+const handleCanvaCtx = (ctx) => {
+	store.ctx = ctx;
+}
 </script>
