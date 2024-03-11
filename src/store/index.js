@@ -5,7 +5,7 @@ export const useFileStore = defineStore('image', {
 	state: () => {
 		return {
 			file: null,
-			ctx: null,
+			image_data: null,
 		}
 	},
 	getters: {

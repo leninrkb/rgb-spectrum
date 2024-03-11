@@ -8,17 +8,14 @@
 		</ElevatedCard>
 		<ElevatedCard>
 			<VColumn>
-				title: {{ store.get_name }}
-				<!-- <img :src="store.get_object_url" alt="selected img" /> -->
-				<VCanva :img_url="store.get_object_url" @context="handleCanvaCtx"></VCanva>
-				<OutlineButton>Split chanels</OutlineButton>
+				<h4 class="text-xl font-bold">{{ store.get_name }}</h4>
+				<VCanva :object_url="store.get_object_url" @image_data="catch_image_data"></VCanva>
+				<OutlineButton @click="show_channels">Split chanels</OutlineButton>
 			</VColumn>
 		</ElevatedCard>
-		<ElevatedCard>
+		<ElevatedCard v-if="split_channels">
 			<VRow>
-				<VChannel></VChannel>
-				<VChannel></VChannel>
-				<VChannel></VChannel>
+				<VChannel :channel="0" :image_data="store.image_data"></VChannel>
 			</VRow>
 		</ElevatedCard>
 	</VColumn>
@@ -33,11 +30,23 @@ import ElevatedCard from "../components/ElevatedCard.vue";
 import VRow from "../layouts/VRow.vue";
 import VColumn from "../layouts/VColumn.vue";
 import FlatButton from "../components/FlatButton.vue";
-// import { ref, onMounted } from "vue";
+import { ref, watch } from "vue";
 import { useFileStore } from "../store/index.js";
 
 const store = useFileStore();
-const handleCanvaCtx = (ctx) => {
-	store.ctx = ctx;
+
+let split_channels = ref(false);
+
+const catch_image_data = (data) => {
+	store.image_data = data;
 }
+const show_channels = () => {
+	if (store.file !== null) {
+		split_channels.value = true;
+	}
+}
+
+watch(() => store.get_object_url, () => {
+	split_channels.value = false;
+});
 </script>
