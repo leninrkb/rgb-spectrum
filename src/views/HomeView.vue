@@ -14,7 +14,28 @@
 				<OutlineButton>Split chanels</OutlineButton>
 			</VColumn>
 		</ElevatedCard>
-		<ElevatedCard> seccion 3 </ElevatedCard>
+		<ElevatedCard>
+			<VRow>
+				<VColumn>
+					<div>channel</div>
+					<div>graph</div>
+					<div>slider</div>
+					<div>apply</div>
+				</VColumn>
+				<VColumn>
+					<div>channel</div>
+					<div>graph</div>
+					<div>slider</div>
+					<div>apply</div>
+				</VColumn>
+				<VColumn>
+					<div>channel</div>
+					<div>graph</div>
+					<div>slider</div>
+					<div>apply</div>
+				</VColumn>
+			</VRow>
+		</ElevatedCard>
 	</VColumn>
 </template>
 
