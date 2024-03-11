@@ -4,7 +4,8 @@ import { defineStore } from 'pinia'
 export const useFileStore = defineStore('image', {
 	state: () => {
 		return {
-			file: null
+			file: null,
+			ctx: null,
 		}
 	},
 	getters: {

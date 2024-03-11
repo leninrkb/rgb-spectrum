@@ -4,9 +4,10 @@
 
 
 <script setup>
-import { defineProps, watch } from "vue";
+import { watch } from "vue";
 
 const props = defineProps(["img_url"]);
+const emit = defineEmits(["context"]);
 
 const drawimg = (url) => {
     let img = new Image();
@@ -18,6 +19,7 @@ const drawimg = (url) => {
         ctx.drawImage(img, 0, 0, img.width, img.height);
     }
     img.src = url;
+    emit("context", ctx);
 }
 
 watch(() => props.img_url, (newurl) => {
