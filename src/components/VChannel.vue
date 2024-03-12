@@ -1,15 +1,15 @@
 <template>
     <VColumn>
         <img :src="source" alt="red channel">
-        <div>graph</div>
+        <!-- <div>graph</div>
         <meter value="0.2"></meter>
-        <OutlineButton>Apply</OutlineButton>
+        <OutlineButton>Apply</OutlineButton> -->
     </VColumn>
 </template>
 
 <script setup>
 // import VCanva from "../components/VCanva.vue";
-import OutlineButton from "./OutlineButton.vue";
+// import OutlineButton from "./OutlineButton.vue";
 import VColumn from "../layouts/VColumn";
 import { ref, defineProps, onMounted } from "vue";
 
@@ -50,4 +50,9 @@ onMounted(() => {
 
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+img {
+    width: 20em;
+    border-radius: $radius;
+}
+</style>

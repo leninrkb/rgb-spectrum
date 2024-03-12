@@ -16,6 +16,8 @@
 		<ElevatedCard v-if="split_channels">
 			<VRow>
 				<VChannel :channel="0" :image_data="store.image_data"></VChannel>
+				<VChannel :channel="1" :image_data="store.image_data"></VChannel>
+				<VChannel :channel="2" :image_data="store.image_data"></VChannel>
 			</VRow>
 		</ElevatedCard>
 	</VColumn>
