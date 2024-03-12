@@ -1,21 +1,21 @@
 <template>
     <VColumn>
         <img :src="source" alt="red channel">
-        <!-- <div>graph</div>
-        <meter value="0.2"></meter>
-        <OutlineButton>Apply</OutlineButton> -->
+        <div>graph</div>
+        <input type="range" min="0" max="255" v-model="range">
+        <OutlineButton>Apply</OutlineButton>
     </VColumn>
 </template>
 
 <script setup>
-// import VCanva from "../components/VCanva.vue";
-// import OutlineButton from "./OutlineButton.vue";
+import OutlineButton from "./OutlineButton.vue";
 import VColumn from "../layouts/VColumn";
 import { ref, defineProps, onMounted } from "vue";
 
 const props = defineProps(["image_data", "channel"]);
 
 let source = ref(null);
+let range = ref(0);
 
 const split_channel = (image_data, channel) => {
     if (image_data === null || image_data === undefined) {
