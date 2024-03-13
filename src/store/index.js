@@ -24,8 +24,8 @@ export const useFileStore = defineStore('image', {
 		}
 	},
 	actions: {
-		set_channel(channel, image_data) {
-			this.channels[channel] = image_data;
+		set_channel(channel, source) {
+			this.channels[channel] = source;
 		}
 	}
 })

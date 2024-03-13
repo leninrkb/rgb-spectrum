@@ -10,10 +10,12 @@
 <script setup>
 import OutlineButton from "./OutlineButton.vue";
 import VColumn from "../layouts/VColumn";
-import { ref, defineProps, onMounted } from "vue";
+import { ref, defineProps, onMounted, watch } from "vue";
+import { useFileStore } from "../store/index.js";
 
 const props = defineProps(["image_data", "channel"]);
 
+let store = useFileStore();
 let source = ref(null);
 let increment = ref(0);
 let _image_data = null; // initial image data after split
@@ -23,15 +25,15 @@ const new_image_data = (pixels, image_data) => {
     return new ImageData(new Uint8ClampedArray(pixels), image_data.width, image_data.height);
 }
 
-const split_channel = (image_data, channel) => {
+const split_channel = (image_data) => {
     if (image_data === null || image_data === undefined) {
         return;
     }
     let image_array = [];
     for (let i = 0; i < image_data.data.length; i += 4) {
-        let pixel = image_data.data[i + channel];
+        let pixel = image_data.data[i + props.channel];
         let channels = [0, 0, 0, 255];
-        channels[channel] = pixel;
+        channels[props.channel] = pixel;
         for (let j = 0; j < channels.length; j++) {
             image_array.push(channels[j]);
         }
@@ -71,6 +73,10 @@ const apply_increment = () => {
 onMounted(() => {
     _image_data = split_channel(props.image_data, props.channel);
     source.value = create_source(_image_data);
+});
+
+watch(source, (new_source) => {
+    store.set_channel(props.channel, new_source);
 });
 
 </script>
