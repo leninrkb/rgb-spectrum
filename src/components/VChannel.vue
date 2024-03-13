@@ -10,11 +10,12 @@
 <script setup>
 import OutlineButton from "./OutlineButton.vue";
 import VColumn from "../layouts/VColumn";
-import { ref, defineProps, onMounted, watch } from "vue";
+import { ref, defineProps, onMounted, defineEmits } from "vue";
 import { useFileStore } from "../store/index.js";
 
 const props = defineProps(["image_data", "channel"]);
 
+let emit = defineEmits(["changed"]);
 let store = useFileStore();
 let source = ref(null);
 let increment = ref(0);
@@ -67,16 +68,15 @@ const apply_increment = () => {
         }
     }
     let img_data = new_image_data(new_pixels, _image_data);
+    store.set_channel(props.channel, img_data);
     source.value = create_source(img_data);
+    emit("changed");
 }
 
 onMounted(() => {
     _image_data = split_channel(props.image_data, props.channel);
+    store.set_channel(props.channel, _image_data);
     source.value = create_source(_image_data);
-});
-
-watch(source, (new_source) => {
-    store.set_channel(props.channel, new_source);
 });
 
 </script>
