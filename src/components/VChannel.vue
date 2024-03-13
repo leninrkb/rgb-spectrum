@@ -50,7 +50,6 @@ const create_source = (image_data) => {
 }
 
 const apply_increment = () => {
-    console.log(_image_data);
     let pixels = _image_data.data;
     let new_pixels = [];
     for (let i = 0; i < pixels.length; i += 4) {
@@ -65,7 +64,6 @@ const apply_increment = () => {
             new_pixels.push(channels[q]);
         }
     }
-    console.log(new_pixels);
     let img_data = new_image_data(new_pixels, _image_data);
     source.value = create_source(img_data);
 }
