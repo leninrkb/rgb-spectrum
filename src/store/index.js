@@ -6,6 +6,7 @@ export const useFileStore = defineStore('image', {
 		return {
 			file: null,
 			image_data: null,
+			channels: [null, null, null],
 		}
 	},
 	getters: {
@@ -22,4 +23,9 @@ export const useFileStore = defineStore('image', {
 			return state.file.name;
 		}
 	},
+	actions: {
+		set_channel(channel, image_data) {
+			this.channels[channel] = image_data;
+		}
+	}
 })
